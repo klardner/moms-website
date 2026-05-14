@@ -1,0 +1,72 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Siobhan Lardner Counselling and Psychotherapy - Home{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-image">
+        <img src="{% static 'website/images/profile.jpg' %}" alt="Siobhan Lardner">
+    </div>
+</section>
+
+<section class="about section-white">
+    <div class="container">
+        <h2 class="section-title">ABOUT ME</h2>
+        <p>I am a fully qualified and accredited psychotherapist with an MSc in Humanistic and Integrative Counselling and Psychotherapy from University College Cork having completed four years of training in Turning Point Training Institute (TPTI). I also hold a Post-graduate Diploma in Integrative Clinical Psychotherapy awarded by TPTI and recognised by IAHIP, IACP and EAP and ICP.</p>
+        <p>I am an accredited member of the Irish Association of Humanistic and Integrative Psychotherapy (I.A.H.I.P) and maintain the professional standards set out in their code of ethics, which were developed for the protection of the public.</p>
+        <p>I began my career as a general nurse which provided me with a solid foundation in caring for others and understanding their individual needs. My background has informed my psychotherapy practice through an integration of these professions which are both rooted in compassion and a deep understanding that mind and body are fundamentally connected.</p>
+    </div>
+</section>
+
+<section class="quote-banner">
+    <div class="container">
+        <blockquote>
+            <p>'Our wounds are often the openings into the best and most beautiful parts of us'</p>
+            <cite>David Richo</cite>
+        </blockquote>
+    </div>
+</section>
+
+<section class="approach section-white">
+    <div class="approach-layout">
+        <div class="approach-image">
+            <img src="{% static 'website/images/forest.jpg' %}" alt="Peaceful forest with sunlight">
+        </div>
+        <div class="approach-text">
+            <h2 class="section-title">MY APPROACH</h2>
+            <h3>Personalised Care and Guidance</h3>
+            <p>I implement effective psychotherapy methods to instill self-understanding amongst clients and encourage them to adopt new attitudes and feelings towards life situations. From small scale circumstances, to traumatic experiences - my services are personalized to suit the client's specific needs.</p>
+            <p>I'm an integrative therapist, which means that I have a solid foundation in a wide variety of theoretical approaches and have developed my own way of working as a result. In particular I draw from humanistic, psychosynthesis, psychodynamic and existential psychotherapies, as well as new research in neuroscience.</p>
+            <p>Should we decide to work together, I will give you my full attention, a safe place to express yourself, and my knowledge and experience to give you as much support as I can. I may offer you a different perspective, I may challenge you in a supportive way, and I may suggest various coping strategies so that you can start to make the changes that you want.</p>
+            <p>The exploration undertaken in therapy will give you a deeper understanding of what you are feeling and why, and can help you to make effective, positive and lasting change.</p>
+        </div>
+    </div>
+</section>
+
+<section class="booking-section section-white">
+    <div class="container">
+        <h2 class="section-title">BOOKING A SESSION</h2>
+        <div class="booking-grid">
+            <div class="booking-card">
+                <h3>PHONE</h3>
+                <p>You can contact me by texting or calling</p>
+                <p class="booking-detail">085 702 8055</p>
+            </div>
+            <div class="booking-card">
+                <h3>E-MAIL</h3>
+                <p>Contact me at</p>
+                <p class="booking-detail">siobhan.lardner@gmail.com</p>
+            </div>
+            <div class="booking-card">
+                <h3>CONTACT ME TAB</h3>
+                <p>Leave me a private message on this site and I will contact you. Just go to the "Contact" tab</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="counselling-image">
+    <img src="{% static 'website/images/counselling.jpg' %}" alt="Counselling session">
+</section>
+{% endblock %}

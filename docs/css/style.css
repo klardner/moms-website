@@ -1,0 +1,575 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #9b7cc5;
+    --purple-dark: #7c5cbf;
+    --purple-light: #c9a8e8;
+    --purple-bg: #c9a0e8;
+    --text-dark: #333;
+    --text-light: #fff;
+    --bg-white: #fff;
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    line-height: 1.7;
+    font-size: 16px;
+    background: var(--bg-white);
+}
+
+a {
+    color: var(--purple-dark);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Header ===== */
+.site-header {
+    background: var(--purple-bg);
+    padding: 30px 40px 0;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon svg {
+    display: block;
+}
+
+.logo-text h1 {
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--text-dark);
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.logo-text h2 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--text-dark);
+    letter-spacing: 2px;
+    line-height: 1.2;
+}
+
+.logo-text .tagline {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--text-dark);
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+.header-contact {
+    text-align: right;
+    font-size: 14px;
+    color: var(--text-dark);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.header-contact a {
+    color: var(--text-dark);
+}
+
+.main-nav {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: var(--text-dark);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--purple-dark);
+    text-decoration: none;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--text-dark);
+    transition: 0.3s;
+}
+
+/* ===== Hero ===== */
+.hero {
+    background: var(--purple-bg);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--purple-dark);
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+}
+
+.section-title.light {
+    color: var(--text-light);
+}
+
+/* ===== About ===== */
+.section-white {
+    padding: 60px 20px;
+    background: var(--bg-white);
+}
+
+.about .container {
+    text-align: center;
+}
+
+.about p {
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== Quote Banner ===== */
+.quote-banner {
+    background: var(--purple-bg);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.quote-banner blockquote p {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--text-light);
+    font-style: italic;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.quote-banner cite {
+    color: var(--text-light);
+    font-size: 16px;
+    font-style: normal;
+    display: block;
+}
+
+/* ===== Approach ===== */
+.approach-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+}
+
+.approach-image {
+    overflow: hidden;
+}
+
+.approach-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.approach-text {
+    padding: 60px 40px;
+}
+
+.approach-text .section-title {
+    text-align: left;
+}
+
+.approach-text h3 {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.approach-text p {
+    margin-bottom: 16px;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* ===== Booking Banner ===== */
+.booking-banner {
+    background: var(--purple-bg);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.booking-banner p {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+}
+
+.booking-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===== Buttons ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: var(--bg-white);
+    color: var(--purple-dark);
+    border: 2px solid var(--bg-white);
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--text-light);
+    border-color: var(--text-light);
+    text-decoration: none;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-light);
+    border-color: var(--text-light);
+}
+
+.btn-outline:hover {
+    background: var(--bg-white);
+    color: var(--purple-dark);
+    border-color: var(--bg-white);
+}
+
+/* ===== Contact Section ===== */
+.contact-section {
+    background: var(--purple-bg);
+    padding: 80px 40px;
+}
+
+.contact-details {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.contact-block {
+    color: var(--text-light);
+}
+
+.contact-block h3 {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--text-light);
+}
+
+.contact-block p {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.contact-block a {
+    color: var(--text-light);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.contact-block a:hover {
+    opacity: 0.85;
+}
+
+/* ===== Map ===== */
+.map-section {
+    line-height: 0;
+}
+
+.map-section iframe {
+    display: block;
+}
+
+/* ===== Page Hero ===== */
+.page-hero {
+    background: var(--purple-bg);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.page-hero .section-title {
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+/* ===== Services ===== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.service-card {
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.service-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h3 {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    color: var(--purple-dark);
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.fees-section {
+    background: #f9f7fc;
+    padding: 30px;
+    border-radius: 5px;
+    border-left: 4px solid var(--purple);
+}
+
+.fees-section h3 {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--purple-dark);
+    margin-bottom: 15px;
+}
+
+.fees-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.fees-section li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 15px;
+}
+
+.fees-section li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--purple);
+}
+
+/* ===== FAQ ===== */
+.faq-list {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item h3 {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    color: var(--purple-dark);
+    margin-bottom: 12px;
+}
+
+.faq-item p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+    background: var(--text-dark);
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.site-footer p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-contact {
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 5px;
+        text-align: left;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .main-nav {
+        position: relative;
+    }
+
+    .main-nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .main-nav ul.show {
+        display: flex;
+    }
+
+    .logo-text h1 {
+        font-size: 22px;
+    }
+
+    .logo-text h2 {
+        font-size: 16px;
+    }
+
+    .approach-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .approach-image {
+        max-height: 300px;
+    }
+
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .hero-image {
+        width: 220px;
+        height: 220px;
+    }
+}

@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Siobhan Lardner Counselling and Psychotherapy{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-top">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 60 60" width="50" height="50">
+                        <circle cx="30" cy="20" r="8" fill="#7c5cbf" opacity="0.8"/>
+                        <path d="M15 35 Q30 55 45 35 Q30 45 15 35Z" fill="#7c5cbf" opacity="0.8"/>
+                        <path d="M22 42 Q30 52 38 42" stroke="#7c5cbf" fill="none" stroke-width="2" opacity="0.6"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>SIOBHAN LARDNER</h1>
+                    <h2>COUNSELLING AND PSYCHOTHERAPY</h2>
+                    <p class="tagline">Your Well-Being Is in Good Hands</p>
+                </div>
+            </div>
+            <div class="header-contact">
+                <a href="mailto:info@siobhanlardner.ie">info@siobhanlardner.ie</a>
+                <span>0857028055</span>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
+                <li><a href="{% url 'services' %}" class="{% if request.resolver_match.url_name == 'services' %}active{% endif %}">Services</a></li>
+                <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a></li>
+                <li><a href="{% url 'faq' %}" class="{% if request.resolver_match.url_name == 'faq' %}active{% endif %}">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    {% if messages %}
+    <div class="messages">
+        {% for message in messages %}
+        <div class="message {{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h3>Siobhan Lardner</h3>
+            <h4>Counselling and Psychotherapy</h4>
+            <p class="footer-email">info@siobhanlardner.ie</p>
+            <p>Ashtree View</p>
+            <p>Boreen Lusk, Naas, Co. Kildare</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+            document.querySelector('.main-nav ul').classList.toggle('show');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

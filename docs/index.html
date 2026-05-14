@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siobhan Lardner Counselling and Psychotherapy - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-top">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 60 60" width="50" height="50">
+                        <circle cx="30" cy="20" r="8" fill="#7c5cbf" opacity="0.8"/>
+                        <path d="M15 35 Q30 55 45 35 Q30 45 15 35Z" fill="#7c5cbf" opacity="0.8"/>
+                        <path d="M22 42 Q30 52 38 42" stroke="#7c5cbf" fill="none" stroke-width="2" opacity="0.6"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>SIOBHAN LARDNER</h1>
+                    <h2>COUNSELLING AND PSYCHOTHERAPY</h2>
+                    <p class="tagline">Your Well-Being Is in Good Hands</p>
+                </div>
+            </div>
+            <div class="header-contact">
+                <a href="mailto:info@siobhanlardner.ie">info@siobhanlardner.ie</a>
+                <span>0857028055</span>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-image">
+                <img src="images/profile.jpg" alt="Siobhan Lardner">
+            </div>
+        </section>
+
+        <section class="about section-white">
+            <div class="container">
+                <h2 class="section-title">ABOUT ME</h2>
+                <p>I am a fully qualified and accredited psychotherapist with an MSc in Humanistic and Integrative Counselling and Psychotherapy from University College Cork having completed four years of training in Turning Point Training Institute (TPTI). I also hold a Post-graduate Diploma in Integrative Clinical Psychotherapy awarded by TPTI and recognised by IAHIP, IACP and EAP and ICP.</p>
+                <p>I am an accredited member of the Irish Association of Humanistic and Integrative Psychotherapy (I.A.H.I.P) and maintain the professional standards set out in their code of ethics, which were developed for the protection of the public.</p>
+                <p>I began my career as a general nurse which provided me with a solid foundation in caring for others and understanding their individual needs. My background has informed my psychotherapy practice through an integration of these professions which are both rooted in compassion and a deep understanding that mind and body are fundamentally connected.</p>
+            </div>
+        </section>
+
+        <section class="quote-banner">
+            <div class="container">
+                <blockquote>
+                    <p>'Our wounds are often the openings into the best and most beautiful parts of us'</p>
+                    <cite>David Richo</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="approach section-white">
+            <div class="approach-layout">
+                <div class="approach-image">
+                    <img src="images/forest.jpg" alt="Peaceful forest with sunlight">
+                </div>
+                <div class="approach-text">
+                    <h2 class="section-title">MY APPROACH</h2>
+                    <h3>Personalised Care and Guidance</h3>
+                    <p>I implement effective psychotherapy methods to instill self-understanding amongst clients and encourage them to adopt new attitudes and feelings towards life situations. From small scale circumstances, to traumatic experiences - my services are personalized to suit the client's specific needs.</p>
+                    <p>I'm an integrative therapist, which means that I have a solid foundation in a wide variety of theoretical approaches and have developed my own way of working as a result. In particular I draw from humanistic, psychosynthesis, psychodynamic and existential psychotherapies, as well as new research in neuroscience.</p>
+                    <p>Should we decide to work together, I will give you my full attention, a safe place to express yourself, and my knowledge and experience to give you as much support as I can. I may offer you a different perspective, I may challenge you in a supportive way, and I may suggest various coping strategies so that you can start to make the changes that you want.</p>
+                    <p>The exploration undertaken in therapy will give you a deeper understanding of what you are feeling and why, and can help you to make effective, positive and lasting change.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-banner">
+            <div class="container">
+                <h2 class="section-title light">BOOKING A SESSION</h2>
+                <p>To book a session or to find out more, please don't hesitate to get in touch. You can call or email me directly.</p>
+                <div class="booking-actions">
+                    <a href="tel:0857028055" class="btn">Call 085 702 8055</a>
+                    <a href="mailto:siobhan.lardner@gmail.com" class="btn btn-outline">Email Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Siobhan Lardner Counselling and Psychotherapy</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+            document.querySelector('.main-nav ul').classList.toggle('show');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

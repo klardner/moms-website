@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Siobhan Lardner Counselling</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-top">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 60 60" width="50" height="50">
+                        <circle cx="30" cy="20" r="8" fill="#7c5cbf" opacity="0.8"/>
+                        <path d="M15 35 Q30 55 45 35 Q30 45 15 35Z" fill="#7c5cbf" opacity="0.8"/>
+                        <path d="M22 42 Q30 52 38 42" stroke="#7c5cbf" fill="none" stroke-width="2" opacity="0.6"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>SIOBHAN LARDNER</h1>
+                    <h2>COUNSELLING AND PSYCHOTHERAPY</h2>
+                    <p class="tagline">Your Well-Being Is in Good Hands</p>
+                </div>
+            </div>
+            <div class="header-contact">
+                <a href="mailto:info@siobhanlardner.ie">info@siobhanlardner.ie</a>
+                <span>0857028055</span>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <h2 class="section-title">SERVICES</h2>
+        </section>
+
+        <section class="services-content section-white">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Individual Counselling</h3>
+                        <p>One-to-one therapy sessions tailored to your individual needs. Sessions typically last 50 minutes and provide a safe, confidential space for you to explore your thoughts, feelings, and experiences.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Anxiety &amp; Stress</h3>
+                        <p>Support for managing anxiety, panic attacks, and stress-related difficulties. Together we can explore the root causes and develop effective coping strategies.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Depression</h3>
+                        <p>Compassionate support for those experiencing depression, low mood, or feelings of hopelessness. Therapy can help you understand and work through these difficult feelings.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Bereavement &amp; Loss</h3>
+                        <p>Sensitive support through the grieving process, whether through the death of a loved one, relationship breakdown, or other significant losses in life.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Trauma</h3>
+                        <p>Specialist support for those who have experienced traumatic events. Working at your pace, we can process and integrate these experiences in a safe therapeutic environment.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Relationship Issues</h3>
+                        <p>Exploring patterns in relationships, communication difficulties, boundary setting, and building healthier connections with others.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Self-Esteem &amp; Confidence</h3>
+                        <p>Working together to build a stronger sense of self, develop self-compassion, and overcome negative self-beliefs that may be holding you back.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <h3>Life Transitions</h3>
+                        <p>Support during times of change such as career shifts, retirement, becoming a parent, or other major life events that can feel overwhelming.</p>
+                    </div>
+                </div>
+
+                <div class="fees-section">
+                    <h3>Session Information</h3>
+                    <ul>
+                        <li>Sessions last approximately 50 minutes</li>
+                        <li>Sessions are held at Ashtree View, Boreen Lusk, Naas, Co. Kildare</li>
+                        <li>Please contact me to discuss fees</li>
+                        <li>A 24-hour cancellation policy applies</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Siobhan Lardner Counselling and Psychotherapy</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+            document.querySelector('.main-nav ul').classList.toggle('show');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

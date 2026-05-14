@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Siobhan Lardner Counselling</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-top">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 60 60" width="50" height="50">
+                        <circle cx="30" cy="20" r="8" fill="#7c5cbf" opacity="0.8"/>
+                        <path d="M15 35 Q30 55 45 35 Q30 45 15 35Z" fill="#7c5cbf" opacity="0.8"/>
+                        <path d="M22 42 Q30 52 38 42" stroke="#7c5cbf" fill="none" stroke-width="2" opacity="0.6"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>SIOBHAN LARDNER</h1>
+                    <h2>COUNSELLING AND PSYCHOTHERAPY</h2>
+                    <p class="tagline">Your Well-Being Is in Good Hands</p>
+                </div>
+            </div>
+            <div class="header-contact">
+                <a href="mailto:info@siobhanlardner.ie">info@siobhanlardner.ie</a>
+                <span>0857028055</span>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html" class="active">FAQ</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+        </section>
+
+        <section class="faq-content section-white">
+            <div class="container">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>What is psychotherapy?</h3>
+                        <p>Psychotherapy is a process of exploration and self-discovery that takes place in a safe, confidential environment. It involves talking with a trained professional who can help you understand your feelings, thoughts, and behaviours, and support you in making positive changes in your life.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How long does therapy last?</h3>
+                        <p>The length of therapy varies from person to person depending on individual needs and goals. Some people find that a few sessions are sufficient, while others may benefit from longer-term work. This is something we can discuss together during our initial consultation.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What happens in the first session?</h3>
+                        <p>The first session is an opportunity for us to meet and for you to share what has brought you to therapy. We will discuss what you hope to gain from the process, and I will explain how I work. This is also a chance for you to ask any questions and to see if you feel comfortable working with me.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Is everything confidential?</h3>
+                        <p>Yes, confidentiality is a cornerstone of the therapeutic relationship. Everything discussed in sessions is kept strictly confidential. There are very limited exceptions to this, which I will explain clearly at the outset of our work together.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How often are sessions?</h3>
+                        <p>Sessions are typically held weekly at the same time each week. This regular schedule helps to build momentum and maintain the therapeutic process. However, frequency can be adjusted based on your individual needs.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Do I need a referral from my GP?</h3>
+                        <p>No, you do not need a referral from your GP to attend counselling or psychotherapy. You can contact me directly to arrange an appointment. However, if you are currently under the care of a GP or psychiatrist, it can be helpful for us to work collaboratively.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What is your cancellation policy?</h3>
+                        <p>I require 24 hours' notice for cancellations. If a session is cancelled with less than 24 hours' notice, or if you do not attend, the full fee will be charged. This policy helps to ensure that appointment times are available for all clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Siobhan Lardner Counselling and Psychotherapy</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+            document.querySelector('.main-nav ul').classList.toggle('show');
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
